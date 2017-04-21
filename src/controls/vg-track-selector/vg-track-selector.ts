@@ -18,7 +18,7 @@ export interface Option {
             </div>
             
             <select class="trackSelector" (change)="selectTrack($event.target.value)">
-                <option 
+                <option class="trackSelectorOption"
                     *ngFor="let track of tracks" 
                     [value]="track.id"
                     [selected]="track.selected === true">
@@ -64,6 +64,9 @@ export interface Option {
         }
         vg-track-selector select.trackSelector:focus {
             outline: none;
+        }
+        .trackSelector .trackSelectorOption {
+            color: black;
         }
         vg-track-selector .track-selected {
             position: absolute;
